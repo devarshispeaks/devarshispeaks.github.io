@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Devarshi Speaks — Premium Event Anchor. Weddings, Corporate Events, Baby Showers & More. Ahmedabad, Gujarat.">
+  <title>Devarshi Speaks — Premium Event Anchor</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    :root {
+      /* Pure pastel palette */
+      --bg: #fdf9f6;
+      --bg2: #f8f3ee;
+      --bg3: #f2ebe3;
+      --white: #ffffff;
+      --text: #2e221a;
+      --text2: #7a6252;
+      --text3: #b8a494;
+      --border: rgba(180, 148, 120, 0.14);
+      --border2: rgba(180, 148, 120, 0.26);
+
+      /* Brand: soft dusty rose-peach */
+      --brand: #c97860;
+      --brand2: #dfa080;
+      --brand-bg: rgba(201, 120, 96, 0.09);
+      --brand-brd: rgba(201, 120, 96, 0.28);
+
+      /* Pastel accents */
+      --rose: #f2b8c0;
+      --rose-bg: #fef2f4;
+      --rose-brd: #f4c8d0;
+      --rose-txt: #8a3040;
+      --peach: #f5cba0;
+      --peach-bg: #fef6ee;
+      --peach-brd: #f5d8b8;
+      --peach-txt: #7a4418;
+      --lav: #c8b8e8;
+      --lav-bg: #f6f2fd;
+      --lav-brd: #d8ccf0;
+      --lav-txt: #4a3278;
+      --mint: #a8d8c4;
+      --mint-bg: #eef8f4;
+      --mint-brd: #c0e8d8;
+      --mint-txt: #1a5a42;
+      --sky: #a8ccf0;
+      --sky-bg: #eef4fc;
+      --sky-brd: #c0d8f4;
+      --sky-txt: #1a3a6a;
+      --butter: #f0d898;
+      --butter-bg: #fef9ec;
+      --butter-brd: #f0e4b8;
+      --butter-txt: #5a4200;
+      --sage: #b8d4a8;
+      --sage-bg: #f2f8ee;
+      --sage-brd: #c8e0bc;
+      --sage-txt: #2a4a1a;
+
+      --r: 18px;
+      --r-sm: 10px;
+      --shadow: 0 4px 24px rgba(100, 60, 30, 0.07);
+      --shadow-lg: 0 12px 48px rgba(100, 60, 30, 0.11);
+      --shadow-xl: 0 28px 72px rgba(100, 60, 30, 0.15);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 50% at 85% 15%, rgba(242, 184, 192, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 55% at 10% 85%, rgba(168, 216, 196, 0.14) 0%, transparent 52%),
+        radial-gradient(ellipse 40% 40% at 55% 50%, rgba(200, 184, 232, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 48px;
+      background: rgba(253, 249, 246, 0.93);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border2);
+      transition: box-shadow .3s;
+    }
+
+    nav.lifted {
+      box-shadow: 0 4px 28px rgba(100, 60, 30, 0.09)
+    }
+
+    .nav-logo {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      background: linear-gradient(135deg, var(--brand), var(--peach-txt));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      -webkit-text-fill-color: var(--text3);
+      color: var(--text3);
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--text2);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color .2s;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-radius: 1px;
+      background: linear-gradient(90deg, var(--brand), var(--rose));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand)
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1)
+    }
+
+    .nav-book {
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--rose-bg), var(--lav-bg));
+      border: 1.5px solid var(--rose-brd);
+      color: var(--rose-txt);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-book:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(201, 120, 96, 0.2);
+      background: var(--white)
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 22px;
+      padding: 4px
+    }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      padding: 100px 48px 60px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1.08fr;
+      gap: 52px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      background: var(--peach-bg);
+      border: 1.5px solid var(--peach-brd);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--peach-txt);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .pd {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--brand);
+      animation: pd 2s ease infinite
+    }
+
+    @keyframes pd {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .2
+      }
+    }
+
+    .hero-title {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: clamp(26px, 3.8vw, 48px);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, var(--brand) 0%, #b86848 40%, var(--peach-txt) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    .hero-sub {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(15px, 1.8vw, 20px);
+      color: var(--text3);
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-tagline {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 450px;
+      margin-bottom: 30px;
+    }
+
+    .hero-tagline strong {
+      color: var(--brand);
+      font-weight: 600
+    }
+
+    /* Stats bar */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid var(--border2);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 34px;
+    }
+
+    .hs {
+      padding: 15px 10px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: background .2s;
+    }
+
+    .hs:last-child {
+      border-right: none
+    }
+
+    .hs:hover {
+      background: var(--bg2)
+    }
+
+    .hs-n {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--brand);
+      line-height: 1;
+    }
+
+    .hs-l {
+      font-size: 10px;
+      color: var(--text3);
+      margin-top: 4px;
+      font-weight: 500;
+      letter-spacing: .04em
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn-main {
+      padding: 13px 28px;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(135deg, var(--rose-bg), var(--lav-bg));
+      border: 1.5px solid var(--rose-brd);
+      color: var(--rose-txt);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 16px rgba(242, 184, 192, 0.4);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(242, 184, 192, 0.5);
+      background: var(--white)
+    }
+
+    .btn-outline {
+      padding: 13px 28px;
+      border-radius: 50px;
+      background: var(--white);
+      border: 1.5px solid var(--border2);
+      color: var(--text2);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      transform: translateY(-2px)
+    }
+
+    /* 3-photo collage */
+    .hero-photos {
+      position: relative;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hp-a {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 56%;
+      aspect-ratio: 3/4;
+      border-radius: 100px 20px 20px 20px;
+      overflow: hidden;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-xl);
+      z-index: 3;
+      transition: transform .45s ease;
+    }
+
+    .hp-b {
+      position: absolute;
+      right: 2%;
+      top: 0;
+      width: 42%;
+      aspect-ratio: 2/3;
+      border-radius: 20px 100px 20px 20px;
+      overflow: hidden;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lg);
+      z-index: 2;
+      transition: transform .45s ease;
+    }
+
+    .hp-c {
+      position: absolute;
+      right: 4%;
+      bottom: 0;
+      width: 45%;
+      aspect-ratio: 4/3;
+      border-radius: 20px 20px 100px 20px;
+      overflow: hidden;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lg);
+      z-index: 4;
+      transition: transform .45s ease;
+    }
+
+    .hp-a:hover {
+      transform: scale(1.03) rotate(-1.5deg);
+      z-index: 10
+    }
+
+    .hp-b:hover {
+      transform: scale(1.04) rotate(1.5deg);
+      z-index: 10
+    }
+
+    .hp-c:hover {
+      transform: scale(1.04) rotate(-1deg);
+      z-index: 10
+    }
+
+    .hp-a img,
+    .hp-b img,
+    .hp-c img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .5s;
+    }
+
+    .hp-a:hover img,
+    .hp-b:hover img,
+    .hp-c:hover img {
+      transform: scale(1.05)
+    }
+
+    /* Pastel border accent rings */
+    .hp-a::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 106px 24px 24px 24px;
+      border: 2px solid var(--rose-brd);
+      pointer-events: none;
+      opacity: .6
+    }
+
+    .hp-b::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 24px 106px 24px 24px;
+      border: 2px solid var(--lav-brd);
+      pointer-events: none;
+      opacity: .6
+    }
+
+    .hp-c::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 24px 24px 106px 24px;
+      border: 2px solid var(--mint-brd);
+      pointer-events: none;
+      opacity: .6
+    }
+
+    .photo-badge {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--rose-brd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 28px rgba(100, 60, 30, 0.16);
+      text-align: center;
+    }
+
+    .pb-n {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--brand);
+      line-height: 1
+    }
+
+    .pb-t {
+      font-size: 8px;
+      color: var(--text3);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .ftag {
+      position: absolute;
+      z-index: 6;
+      background: var(--white);
+      border-radius: 24px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(100, 60, 30, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1.5px solid var(--border2);
+      white-space: nowrap;
+    }
+
+    .ft1 {
+      top: 18px;
+      right: -10px;
+      background: var(--mint-bg);
+      border-color: var(--mint-brd);
+      color: var(--mint-txt)
+    }
+
+    .ft2 {
+      bottom: 64px;
+      left: -14px;
+      background: var(--lav-bg);
+      border-color: var(--lav-brd);
+      color: var(--lav-txt)
+    }
+
+    .ft3 {
+      bottom: 14px;
+      right: 28px;
+      background: var(--peach-bg);
+      border-color: var(--peach-brd);
+      color: var(--peach-txt);
+      font-size: 11px
+    }
+
+    /* ── DIVIDER ─────────────────────────────────── */
+    .stripe {
+      height: 5px;
+      background: linear-gradient(90deg, var(--rose), var(--lav), var(--mint), var(--sky), var(--peach), var(--butter), var(--rose))
+    }
+
+    /* ── SECTION BASE ────────────────────────────── */
+    section {
+      padding: 88px 48px;
+      position: relative;
+      z-index: 1
+    }
+
+    .si {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 16px;
+      border-radius: 30px;
+      margin-bottom: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .ey-rose {
+      background: var(--rose-bg);
+      border: 1px solid var(--rose-brd);
+      color: var(--rose-txt)
+    }
+
+    .ey-lav {
+      background: var(--lav-bg);
+      border: 1px solid var(--lav-brd);
+      color: var(--lav-txt)
+    }
+
+    .ey-mint {
+      background: var(--mint-bg);
+      border: 1px solid var(--mint-brd);
+      color: var(--mint-txt)
+    }
+
+    .ey-peach {
+      background: var(--peach-bg);
+      border: 1px solid var(--peach-brd);
+      color: var(--peach-txt)
+    }
+
+    .ey-sky {
+      background: var(--sky-bg);
+      border: 1px solid var(--sky-brd);
+      color: var(--sky-txt)
+    }
+
+    .ey-sage {
+      background: var(--sage-bg);
+      border: 1px solid var(--sage-brd);
+      color: var(--sage-txt)
+    }
+
+    .ey-butter {
+      background: var(--butter-bg);
+      border: 1px solid var(--butter-brd);
+      color: var(--butter-txt)
+    }
+
+    h2.sh {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 4.2vw, 54px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    h2.sh em {
+      font-style: italic;
+      color: var(--brand)
+    }
+
+    .sdesc {
+      font-size: 15px;
+      color: var(--text2);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 540px
+    }
+
+    /* ── ABOUT ───────────────────────────────────── */
+    .about-sec {
+      background: var(--white)
+    }
+
+    .about-g {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 68px;
+      align-items: center
+    }
+
+    .ab-body p {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.82;
+      margin-bottom: 13px;
+      font-weight: 300
+    }
+
+    .ab-body p strong {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    .q-stack {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .qp {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 17px;
+      border-radius: 14px;
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.55;
+      transition: all .25s;
+      border: 1.5px solid transparent;
+    }
+
+    .qp:nth-child(1) {
+      background: var(--rose-bg);
+      border-color: rgba(242, 184, 192, .35)
+    }
+
+    .qp:nth-child(2) {
+      background: var(--lav-bg);
+      border-color: rgba(200, 184, 232, .3)
+    }
+
+    .qp:nth-child(3) {
+      background: var(--mint-bg);
+      border-color: rgba(168, 216, 196, .3)
+    }
+
+    .qp:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow)
+    }
+
+    .qi {
+      font-size: 17px;
+      flex-shrink: 0;
+      margin-top: 2px
+    }
+
+    .sk-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .sk-row {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: all .2s;
+    }
+
+    .sk-row:hover {
+      border-color: var(--border2);
+      background: var(--white);
+      box-shadow: var(--shadow)
+    }
+
+    .sk-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text)
+    }
+
+    .sk-track {
+      width: 108px;
+      height: 5px;
+      background: var(--bg3);
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0
+    }
+
+    .sk-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 1.2s ease
+    }
+
+    .sf1 {
+      background: linear-gradient(90deg, var(--rose), #e8909a)
+    }
+
+    .sf2 {
+      background: linear-gradient(90deg, var(--lav), #a888d8)
+    }
+
+    .sf3 {
+      background: linear-gradient(90deg, var(--peach), #e8a050)
+    }
+
+    .sf4 {
+      background: linear-gradient(90deg, var(--mint), #60b890)
+    }
+
+    .sf5 {
+      background: linear-gradient(90deg, var(--sky), #5898d8)
+    }
+
+    .sf6 {
+      background: linear-gradient(90deg, var(--butter), #d0a830)
+    }
+
+    .lc-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px
+    }
+
+    .lang-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 14px;
+      transition: all .25s;
+      cursor: default;
+    }
+
+    .lang-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow)
+    }
+
+    .lang-flag {
+      font-size: 22px;
+      line-height: 1
+    }
+
+    .lang-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px
+    }
+
+    .lang-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.2
+    }
+
+    .lang-script {
+      font-size: 13px;
+      opacity: 0.7;
+      line-height: 1.2
+    }
+
+    .lc1 {
+      background: var(--rose-bg);
+      border: 1.5px solid var(--rose-brd);
+      color: var(--rose-txt)
+    }
+
+    .lc2 {
+      background: var(--lav-bg);
+      border: 1.5px solid var(--lav-brd);
+      color: var(--lav-txt)
+    }
+
+    .lc3 {
+      background: var(--mint-bg);
+      border: 1.5px solid var(--mint-brd);
+      color: var(--mint-txt)
+    }
+
+    /* ── EVENTS ──────────────────────────────────── */
+    .ev-sec {
+      background: var(--bg2)
+    }
+
+    .ev-g {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+      margin-top: 46px
+    }
+
+    /* Last card spans 2 cols on desktop 3-col grid only */
+    @media(min-width:921px) {
+      .ev-g .ev-c:last-child {
+        grid-column: span 2
+      }
+    }
+
+    .ev-c {
+      border-radius: var(--r);
+      padding: 25px 22px;
+      border: 1.5px solid transparent;
+      box-shadow: var(--shadow);
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ev-c::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      border-radius: 0 0 var(--r) var(--r);
+      transform: scaleX(0);
+      transition: transform .35s;
+      transform-origin: center;
+    }
+
+    .ev-c:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .ev-c:hover::after {
+      transform: scaleX(1)
+    }
+
+    .e1 {
+      background: var(--rose-bg);
+      border-color: rgba(242, 184, 192, .4)
+    }
+
+    .e1::after {
+      background: var(--rose)
+    }
+
+    .e2 {
+      background: var(--lav-bg);
+      border-color: rgba(200, 184, 232, .35)
+    }
+
+    .e2::after {
+      background: var(--lav)
+    }
+
+    .e3 {
+      background: var(--butter-bg);
+      border-color: rgba(240, 216, 152, .4)
+    }
+
+    .e3::after {
+      background: var(--butter)
+    }
+
+    .e4 {
+      background: var(--sky-bg);
+      border-color: rgba(168, 204, 240, .35)
+    }
+
+    .e4::after {
+      background: var(--sky)
+    }
+
+    .e5 {
+      background: var(--mint-bg);
+      border-color: rgba(168, 216, 196, .35)
+    }
+
+    .e5::after {
+      background: var(--mint)
+    }
+
+    .e6 {
+      background: var(--sage-bg);
+      border-color: rgba(184, 212, 168, .35)
+    }
+
+    .e6::after {
+      background: var(--sage)
+    }
+
+    .e7 {
+      background: var(--peach-bg);
+      border-color: rgba(245, 203, 160, .38)
+    }
+
+    .e7::after {
+      background: var(--peach)
+    }
+
+    .ev-emo {
+      font-size: 30px;
+      margin-bottom: 13px;
+      display: block
+    }
+
+    .ev-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      color: var(--text);
+      margin-bottom: 7px
+    }
+
+    .ev-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .ev-chip {
+      display: inline-block;
+      margin-top: 13px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .e1 .ev-chip {
+      background: rgba(242, 184, 192, .35);
+      color: var(--rose-txt)
+    }
+
+    .e2 .ev-chip {
+      background: rgba(200, 184, 232, .3);
+      color: var(--lav-txt)
+    }
+
+    .e3 .ev-chip {
+      background: rgba(240, 216, 152, .35);
+      color: var(--butter-txt)
+    }
+
+    .e4 .ev-chip {
+      background: rgba(168, 204, 240, .3);
+      color: var(--sky-txt)
+    }
+
+    .e5 .ev-chip {
+      background: rgba(168, 216, 196, .3);
+      color: var(--mint-txt)
+    }
+
+    .e6 .ev-chip {
+      background: rgba(184, 212, 168, .3);
+      color: var(--sage-txt)
+    }
+
+    .e7 .ev-chip {
+      background: rgba(245, 203, 160, .35);
+      color: var(--peach-txt)
+    }
+
+    /* ── GALLERY ─────────────────────────────────── */
+    .gal-sec {
+      background: var(--white)
+    }
+
+    .gal-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      margin-top: 46px
+    }
+
+    .gc-tall {
+      grid-row: span 2;
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 2/3;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+      border: 4px solid var(--white);
+      transition: transform .4s;
+    }
+
+    .gc-sq {
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--white);
+      transition: transform .4s;
+    }
+
+    .gc-tall:hover,
+    .gc-sq:hover {
+      transform: scale(1.02)
+    }
+
+    .gc-tall img,
+    .gc-sq img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .5s
+    }
+
+    .gc-tall:hover img,
+    .gc-sq:hover img {
+      transform: scale(1.05)
+    }
+
+    .gc-ov {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(30, 24, 16, .55) 0%, transparent 55%)
+    }
+
+    .gc-lbl {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      color: #fff
+    }
+
+    .gc-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .gt1 {
+      background: var(--butter);
+      color: var(--butter-txt)
+    }
+
+    .gt2 {
+      background: var(--rose);
+      color: var(--rose-txt)
+    }
+
+    .gt3 {
+      background: var(--lav);
+      color: var(--lav-txt)
+    }
+
+    .gc-lbl h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.2
+    }
+
+    .gc-lbl p {
+      font-size: 12px;
+      opacity: .88;
+      margin-top: 3px
+    }
+
+    /* ── REVIEWS ─────────────────────────────────── */
+    .rv-sec {
+      background: var(--bg2)
+    }
+
+    .rv-g {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+      margin-top: 46px
+    }
+
+    .rv-c {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 25px;
+      transition: all .25s;
+    }
+
+    .rv-c:hover {
+      border-color: var(--border2);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px)
+    }
+
+    .rv-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px
+    }
+
+    .rv-stars {
+      color: #f0a040;
+      font-size: 14px;
+      letter-spacing: 2px
+    }
+
+    .rv-b {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .rb1 {
+      background: var(--rose-bg);
+      color: var(--rose-txt);
+      border: 1px solid var(--rose-brd)
+    }
+
+    .rb2 {
+      background: var(--lav-bg);
+      color: var(--lav-txt);
+      border: 1px solid var(--lav-brd)
+    }
+
+    .rb3 {
+      background: var(--butter-bg);
+      color: var(--butter-txt);
+      border: 1px solid var(--butter-brd)
+    }
+
+    .rb4 {
+      background: var(--mint-bg);
+      color: var(--mint-txt);
+      border: 1px solid var(--mint-brd)
+    }
+
+    .rv-txt {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.75;
+      font-style: italic;
+      font-weight: 300
+    }
+
+    .rv-auth {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 17px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+    }
+
+    .av {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .av1 {
+      background: linear-gradient(135deg, var(--rose), #e888a0)
+    }
+
+    .av2 {
+      background: linear-gradient(135deg, var(--lav), #a888d8)
+    }
+
+    .av3 {
+      background: linear-gradient(135deg, var(--butter), #d09820)
+    }
+
+    .av4 {
+      background: linear-gradient(135deg, var(--mint), #58b880)
+    }
+
+    .rv-nm {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    .rv-ev {
+      font-size: 12px;
+      color: var(--text3)
+    }
+
+    /* review form */
+    .rvf {
+      background: var(--white);
+      border: 1.5px solid var(--border2);
+      border-radius: var(--r);
+      padding: 32px;
+      margin-top: 30px
+    }
+
+    .rvf-t {
+      font-family: 'DM Serif Display', serif;
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: var(--text)
+    }
+
+    .f2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+      margin-bottom: 13px
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .fg label {
+      font-size: 11px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      font-weight: 600
+    }
+
+    .fg input,
+    .fg textarea,
+    .fg select {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 11px 14px;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+      resize: none;
+    }
+
+    .fg input:focus,
+    .fg textarea:focus,
+    .fg select:focus {
+      border-color: var(--rose)
+    }
+
+    .fg input::placeholder,
+    .fg textarea::placeholder {
+      color: var(--text3)
+    }
+
+    .srow {
+      display: flex;
+      gap: 6px
+    }
+
+    .ss {
+      font-size: 25px;
+      cursor: pointer;
+      filter: grayscale(1);
+      opacity: .25;
+      transition: all .15s;
+      background: none;
+      border: none;
+      padding: 0;
+      line-height: 1
+    }
+
+    .ss.lit {
+      filter: grayscale(0);
+      opacity: 1
+    }
+
+    .btn-rv {
+      margin-top: 17px;
+      padding: 13px 36px;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(135deg, var(--rose-bg), var(--lav-bg));
+      border: 1.5px solid var(--rose-brd);
+      color: var(--rose-txt);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 4px 16px rgba(242, 184, 192, .3);
+    }
+
+    .btn-rv:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(242, 184, 192, .45);
+      background: var(--white)
+    }
+
+    /* ── CONTACT ─────────────────────────────────── */
+    .ct-sec {
+      background: var(--white)
+    }
+
+    .ct-g {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 46px;
+      align-items: start
+    }
+
+    .cinfo {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden
+    }
+
+    .ci-head {
+      padding: 22px 26px;
+      background: linear-gradient(135deg, var(--rose-bg), var(--lav-bg));
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ci-head h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 3px
+    }
+
+    .ci-head p {
+      font-size: 13px;
+      color: var(--text2);
+      font-weight: 300
+    }
+
+    .ci-row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px 26px;
+      border-bottom: 1px solid var(--border);
+      transition: background .2s;
+    }
+
+    .ci-row:last-child {
+      border-bottom: none
+    }
+
+    .ci-row:hover {
+      background: var(--white)
+    }
+
+    .ci-ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .cic1 {
+      background: var(--rose-bg)
+    }
+
+    .cic2 {
+      background: var(--lav-bg)
+    }
+
+    .cic3 {
+      background: var(--mint-bg)
+    }
+
+    .cic4 {
+      background: var(--peach-bg)
+    }
+
+    .cic5 {
+      background: var(--sky-bg)
+    }
+
+    .ci-lbl {
+      font-size: 11px;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 600;
+      margin-bottom: 2px
+    }
+
+    .ci-val {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .wa-box {
+      background: var(--bg);
+      border: 1.5px solid var(--border2);
+      border-radius: var(--r);
+      padding: 28px
+    }
+
+    .wa-hd {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .wa-ico {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px
+    }
+
+    .btn-wa {
+      width: 100%;
+      margin-top: 13px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #25d366;
+      border: none;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-wa:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, .32)
+    }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--text);
+      padding: 42px 48px 30px
+    }
+
+    .f-in {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px
+    }
+
+    .f-brand {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 16px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--rose), var(--peach));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .f-copy {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .35);
+      margin-top: 5px
+    }
+
+    .f-soc {
+      display: flex;
+      gap: 9px
+    }
+
+    .fs {
+      width: 37px;
+      height: 37px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all .2s;
+      text-decoration: none;
+    }
+
+    .fs:hover {
+      background: rgba(255, 255, 255, .16);
+      transform: translateY(-2px)
+    }
+
+    /* ── TOAST ───────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 9999;
+      background: var(--white);
+      border: 1.5px solid var(--border2);
+      border-radius: 14px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all .3s;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1
+    }
+
+    /* ── REVEAL ──────────────────────────────────── */
+    .rv {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media(max-width:920px) {
+      nav {
+        padding: 14px 20px
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        right: 0;
+        background: rgba(253, 249, 246, .97);
+        border-bottom: 1px solid var(--border2);
+        flex-direction: column;
+        gap: 0;
+        padding: 6px 0;
+        backdrop-filter: blur(20px);
+        z-index: 99
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 13px 24px;
+        border-bottom: 1px solid var(--border)
+      }
+
+      .nav-toggle {
+        display: block
+      }
+
+      section {
+        padding: 60px 20px
+      }
+
+      .hero {
+        padding: 90px 20px 50px
+      }
+
+      .hero-inner,
+      .about-g,
+      .ct-g {
+        grid-template-columns: 1fr;
+        gap: 38px
+      }
+
+      .hero-photos {
+        height: 460px
+      }
+
+      .ev-g {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .ev-g .ev-c:last-child {
+        grid-column: span 2
+      }
+
+      .rv-g {
+        grid-template-columns: 1fr
+      }
+
+      .gal-wrap {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+      }
+
+      .gc-tall {
+        grid-row: auto;
+        aspect-ratio: 3/4
+      }
+
+      footer {
+        padding: 30px 20px
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .hs:nth-child(2) {
+        border-right: none
+      }
+
+      .hs:nth-child(3) {
+        border-top: 1px solid var(--border)
+      }
+
+      .hs:nth-child(4) {
+        border-top: 1px solid var(--border);
+        border-right: none
+      }
+
+      .f2 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:520px) {
+      .ev-g {
+        grid-template-columns: 1fr
+      }
+
+      .ev-g .ev-c:last-child {
+        grid-column: span 1
+      }
+
+      .hero-title {
+        font-size: 24px
+      }
+
+      .hero-photos {
+        height: 380px
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--rose);
+      border-radius: 3px
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-logo">Devarshi Speaks<span>Premium Event Anchor · Ahmedabad</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-book">Book Now</a>
+    <button class="nav-toggle" id="navTog" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="rv">
+        <div class="hero-eyebrow"><span class="pd"></span> Available for Bookings 2026</div>
+        <div class="hero-title">Devarshi<br>Speaks</div>
+        <div class="hero-sub">Where every celebration finds its perfect voice</div>
+        <p class="hero-tagline">
+          I don't just host events — I <strong>craft memories</strong> that echo long after the music fades.
+          Bringing warmth, energy and genuine emotion to every stage.
+        </p>
+        <div class="hero-stats">
+          <div class="hs">
+            <div class="hs-n">5+</div>
+            <div class="hs-l">Yrs Exp.</div>
+          </div>
+          <div class="hs">
+            <div class="hs-n">3</div>
+            <div class="hs-l">Languages</div>
+          </div>
+          <div class="hs">
+            <div class="hs-n">100%</div>
+            <div class="hs-l">Happy Clients</div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-main">Book Devarshi</a>
+          <a href="#events" class="btn-outline">Explore Events</a>
+        </div>
+      </div>
+      <!-- PHOTOS -->
+      <div class="hero-photos rv" style="transition-delay:.18s">
+        <div class="hp-a"><img src="tall.jpeg" alt="Event Anchor"></div>
+        <div class="hp-b"><img src="wedding_event.jpeg" alt="Wedding Event"></div>
+        <div class="hp-c"><img src="haldi.jpeg" alt="Haldi Event"></div>
+        <div class="ftag ft1">5+ Years of Excellence</div>
+        <div class="ftag ft2">Wedding Specialist</div>
+        <div class="ftag ft3">100% Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- ABOUT -->
+  <section class="about-sec" id="about">
+    <div class="si">
+      <div class="about-g">
+        <div class="rv">
+          <div class="eyebrow ey-rose">Meet the Anchor</div>
+          <h2 class="sh">The Voice Behind Your <em>Best Moments</em></h2>
+          <div class="ab-body">
+            <p>Hello! I'm <strong>Devarshi Trivedi</strong> — a professional event anchor with over <strong>5 years of
+                experience</strong> hosted across Gujarat and beyond.</p>
+            <p>With a natural flair for connecting with people, I bring warmth, energy and genuine emotion to every
+              stage. From the joyful splash of a Haldi ceremony to the polished grace of a corporate gala — <strong>I
+                make every moment count.</strong></p>
+            <p>Fluent in <strong>Hindi, Gujarati and English</strong>, I craft experiences that feel personal, seamless
+              and beautifully human — because your event is not just a programme, it's a story worth telling.</p>
+          </div>
+          <div class="q-stack">
+            <div class="qp"><span class="qi">&#127908;</span>"They say a microphone amplifies sound — I say it amplifies
+              souls."</div>
+            <div class="qp"><span class="qi">&#10024;</span>"Every event has a heartbeat. I help it find its rhythm."
+            </div>
+            <div class="qp"><span class="qi">&#127775;</span>"I don't do scripts. I do moments that echo forever."</div>
+          </div>
+        </div>
+        <div class="rv" style="transition-delay:.15s">
+          <div class="sk-col">
+            <div class="sk-row"><span class="sk-name">Wedding &amp; Ceremony Hosting</span>
+              <div class="sk-track">
+                <div class="sk-fill sf1" data-w="99%" style="width:0"></div>
+              </div>
+            </div>
+            <div class="sk-row"><span class="sk-name">Crowd Engagement &amp; Energy</span>
+              <div class="sk-track">
+                <div class="sk-fill sf2" data-w="95%" style="width:0"></div>
+              </div>
+            </div>
+            <div class="sk-row"><span class="sk-name">Corporate Event Anchoring</span>
+              <div class="sk-track">
+                <div class="sk-fill sf3" data-w="91%" style="width:0"></div>
+              </div>
+            </div>
+            <div class="sk-row"><span class="sk-name">Bilingual Delivery</span>
+              <div class="sk-track">
+                <div class="sk-fill sf4" data-w="98%" style="width:0"></div>
+              </div>
+            </div>
+            <div class="sk-row"><span class="sk-name">Script Writing &amp; Improvisation</span>
+              <div class="sk-track">
+                <div class="sk-fill sf5" data-w="88%" style="width:0"></div>
+              </div>
+            </div>
+            <div class="sk-row"><span class="sk-name">Stage Presence &amp; Poise</span>
+              <div class="sk-track">
+                <div class="sk-fill sf6" data-w="96%" style="width:0"></div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:17px;margin-top:12px">
+            <div
+              style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-bottom:10px">
+              Languages</div>
+            <div class="lc-row">
+              <div class="lang-card lc1">
+                <div class="lang-info">
+                  <div class="lang-name">&#2361;&#2367;&#2306;&#2342;&#2368;</div>
+                </div>
+              </div>
+              <div class="lang-card lc2">
+                <div class="lang-info">
+                  <div class="lang-name">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</div>
+                </div>
+              </div>
+              <div class="lang-card lc3">
+                <div class="lang-info">
+                  <div class="lang-name">English</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- EVENTS -->
+  <section class="ev-sec" id="events">
+    <div class="si">
+      <div class="rv" style="text-align:center">
+        <div class="eyebrow ey-lav">What I Host</div>
+        <h2 class="sh">Events That <em>Define Celebrations</em></h2>
+        <p class="sdesc" style="margin:0 auto">From intimate ceremonies to grand galas — every event gets the anchoring
+          it truly deserves.</p>
+      </div>
+      <div class="ev-g">
+        <div class="ev-c e1 rv"><span class="ev-emo">&#128141;</span>
+          <div class="ev-name">Wedding Ceremonies</div>
+          <div class="ev-desc">From the sacred Varmala to the final farewell — weaving deep emotion into every ritual
+            with warmth, grace and perfectly chosen words.</div><span class="ev-chip">Most Booked</span>
+        </div>
+        <div class="ev-c e2 rv" style="transition-delay:.07s"><span class="ev-emo">&#128131;</span>
+          <div class="ev-name">Sangeet &amp; Mehendi</div>
+          <div class="ev-desc">High-energy anchoring with crowd games, dance face-offs and audience participation that
+            keeps pre-wedding nights electric.</div><span class="ev-chip">Fan Favourite</span>
+        </div>
+        <div class="ev-c e3 rv" style="transition-delay:.14s"><span class="ev-emo">&#127807;</span>
+          <div class="ev-name">Haldi Ceremonies</div>
+          <div class="ev-desc">Vibrant, fun and deeply traditional — making the Haldi function a joyful splash of colour
+            and laughter that guests never forget.</div><span class="ev-chip">Signature</span>
+        </div>
+        <div class="ev-c e4 rv" style="transition-delay:.07s"><span class="ev-emo">&#127970;</span>
+          <div class="ev-name">Corporate Events</div>
+          <div class="ev-desc">Annual days, product launches, award nights — hosted with crisp professionalism, sharp
+            clarity and just the right energy.</div><span class="ev-chip">Premium</span>
+        </div>
+        <div class="ev-c e5 rv" style="transition-delay:.14s"><span class="ev-emo">&#128118;</span>
+          <div class="ev-name">Baby Showers</div>
+          <div class="ev-desc">Tender, joyful ceremonies celebrating new beginnings — filled with fun games, heartfelt
+            blessings and a touch of tradition.</div><span class="ev-chip">Intimate</span>
+        </div>
+        <div class="ev-c e6 rv" style="transition-delay:.21s"><span class="ev-emo">&#127942;</span>
+          <div class="ev-name">Award Functions &amp; Galas</div>
+          <div class="ev-desc">Red carpet moments, felicitation ceremonies, cultural festivals — commanding the stage
+            with authority, wit and effortless poise.</div><span class="ev-chip">Grand Scale</span>
+        </div>
+        <div class="ev-c e7 rv" style="transition-delay:.28s"><span class="ev-emo">&#127874;</span>
+          <div class="ev-name">Birthday Celebrations</div>
+          <div class="ev-desc">From a little one's first birthday to a grand golden jubilee — every milestone deserves
+            an anchor who makes it as grand as the occasion itself. Let the cake, confetti and cheers flow while I
+            handle the magic on stage!</div><span class="ev-chip">Fun &amp; Lively</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- GALLERY -->
+  <section class="gal-sec" id="gallery">
+    <div class="si">
+      <div class="rv" style="text-align:center">
+        <div class="eyebrow ey-butter">Gallery</div>
+        <h2 class="sh">Moments That <em>Matter Most</em></h2>
+      </div>
+      <div class="gal-wrap rv" style="transition-delay:.1s">
+        <div class="gc-tall">
+          <img src="tall.jpeg" alt="">
+          <div class="gc-ov"></div>
+          <div class="gc-lbl"><span class="gc-tag gt1">The Anchor</span>
+            <h3>Colour, Joy &amp; Laughter</h3>
+            <p>Anchoring Shivangi &amp; Shyam's Haldi</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div class="gc-sq">
+            <img src="wedding_event.jpeg" alt="">
+            <div class="gc-ov"></div>
+            <div class="gc-lbl"><span class="gc-tag gt2">Wedding Event</span>
+              <h3>Stage Presence</h3>
+              <p>Commanding every wedding moment</p>
+            </div>
+          </div>
+          <div class="gc-sq">
+            <img src="haldi.jpeg" alt="">
+            <div class="gc-ov"></div>
+            <div class="gc-lbl"><span class="gc-tag gt3">Haldi Ceremony</span>
+              <h3>Devarshi Trivedi</h3>
+              <p>Ready for your next celebration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- REVIEWS -->
+  <section class="rv-sec" id="reviews">
+    <div class="si">
+      <div class="rv" style="text-align:center">
+        <div class="eyebrow ey-mint">Client Love</div>
+        <h2 class="sh">What People <em>Say</em></h2>
+      </div>
+      <div class="rv-g" id="rvGrid">
+        <div class="rv-c rv">
+          <div class="rv-top">
+            <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="rv-b rb1">Wedding</span>
+          </div>
+          <p class="rv-txt">"Devarshi made our wedding feel like a dream! His voice, timing and energy were absolutely
+            flawless. Our guests still talk about how incredible the anchoring was."</p>
+          <div class="rv-auth">
+            <div class="av av1">RP</div>
+            <div>
+              <div class="rv-nm">Rohan &amp; Priya Shah</div>
+              <div class="rv-ev">Wedding · Ahmedabad, 2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-c rv" style="transition-delay:.08s">
+          <div class="rv-top">
+            <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="rv-b rb2">Corporate</span>
+          </div>
+          <p class="rv-txt">"Hired Devarshi for our Annual Day — best decision ever. He kept 300+ employees engaged for
+            4 hours straight. Truly a professional who knows his craft."</p>
+          <div class="rv-auth">
+            <div class="av av2">KP</div>
+            <div>
+              <div class="rv-nm">Karan Patel</div>
+              <div class="rv-ev">Corporate Annual Day · Surat, 2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv-c rv" style="transition-delay:.16s">
+          <div class="rv-top">
+            <div class="rv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="rv-b rb4">Sangeet</span>
+          </div>
+          <p class="rv-txt">"Zabardast performance! Flawless Hindi and Gujarati anchoring, and he improvised brilliantly
+            through the delays. The crowd absolutely loved him!"</p>
+          <div class="rv-auth">
+            <div class="av av4">DJ</div>
+            <div>
+              <div class="rv-nm">Dhruv Joshi</div>
+              <div class="rv-ev">Sangeet Night · Ahmedabad, 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- form -->
+      <div class="rvf rv">
+        <div class="rvf-t">Share Your Experience</div>
+        <div class="f2">
+          <div class="fg"><label>Your Name</label><input id="fb-name" type="text" placeholder="e.g. Rahul Sharma"></div>
+          <div class="fg"><label>Event Type</label>
+            <select id="fb-event">
+              <option value="">Select event...</option>
+              <option>Wedding Ceremony</option>
+              <option>Sangeet / Mehendi</option>
+              <option>Haldi Ceremony</option>
+              <option>Corporate Event</option>
+              <option>Baby Shower</option>
+              <option>Birthday Celebration</option>
+              <option>Award Function</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg" style="margin-bottom:13px"><label>Your Review</label><textarea id="fb-text" rows="3"
+            placeholder="Tell us about your experience with Devarshi..."></textarea></div>
+        <div class="fg"><label>Your Rating</label>
+          <div class="srow" id="starRow">
+            <button class="ss lit" data-v="1">&#9733;</button>
+            <button class="ss lit" data-v="2">&#9733;</button>
+            <button class="ss lit" data-v="3">&#9733;</button>
+            <button class="ss lit" data-v="4">&#9733;</button>
+            <button class="ss lit" data-v="5">&#9733;</button>
+          </div>
+        </div>
+        <button class="btn-rv" onclick="submitReview()">Submit Review</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- CONTACT -->
+  <section class="ct-sec" id="contact">
+    <div class="si">
+      <div class="rv" style="text-align:center">
+        <div class="eyebrow ey-sky">Let's Connect</div>
+        <h2 class="sh">Book Devarshi For Your <em>Special Day</em></h2>
+        <p class="sdesc" style="margin:0 auto 46px">Every great event begins with a conversation. Reach out now — I
+          would love to be part of your celebration!</p>
+      </div>
+      <div class="ct-g">
+        <div class="rv">
+          <div class="cinfo">
+            <div class="ci-head">
+              <h3>Devarshi Trivedi</h3>
+              <p>Professional Event Anchor · Ahmedabad, Gujarat</p>
+            </div>
+            <div class="ci-row">
+              <div class="ci-ico cic1">&#128205;</div>
+              <div>
+                <div class="ci-lbl">Based In</div>
+                <div class="ci-val">Ahmedabad, Gujarat</div>
+              </div>
+            </div>
+            <div class="ci-row">
+              <div class="ci-ico cic2">&#128241;</div>
+              <div>
+                <div class="ci-lbl">WhatsApp</div>
+                <div class="ci-val">+91 70484 34026</div>
+              </div>
+            </div>
+            <div class="ci-row">
+              <div class="ci-ico cic3">&#127758;</div>
+              <div>
+                <div class="ci-lbl">Coverage</div>
+                <div class="ci-val">Pan India &amp; Destination Events</div>
+              </div>
+            </div>
+            <div class="ci-row">
+              <div class="ci-ico cic4">&#128172;</div>
+              <div>
+                <div class="ci-lbl">Languages</div>
+                <div class="ci-val">Hindi · Gujarati · English</div>
+              </div>
+            </div>
+            <div class="ci-row">
+              <div class="ci-ico cic5">&#127908;</div>
+              <div>
+                <div class="ci-lbl">Experience</div>
+                <div class="ci-val">5+ Years · 100% Happy Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rv" style="transition-delay:.15s">
+          <div class="wa-box">
+            <div class="wa-hd">
+              <div class="wa-ico">&#128172;</div>WhatsApp Enquiry
+            </div>
+            <div class="fg" style="margin-bottom:12px"><label>Your Name</label><input id="wa-name" type="text"
+                placeholder="Your full name"></div>
+            <div class="fg" style="margin-bottom:12px"><label>Event Type</label>
+              <select id="wa-event">
+                <option value="">Select event type...</option>
+                <option>Wedding Ceremony</option>
+                <option>Sangeet / Mehendi</option>
+                <option>Haldi Ceremony</option>
+                <option>Corporate Event</option>
+                <option>Baby Shower</option>
+                <option>Birthday Celebration</option>
+                <option>Award Function</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="f2" style="margin-bottom:12px">
+              <div class="fg"><label>Event Date</label><input id="wa-date" type="date"></div>
+              <div class="fg"><label>City / Venue</label><input id="wa-city" type="text" placeholder="e.g. Ahmedabad">
+              </div>
+            </div>
+            <div class="fg"><label>Message</label><textarea id="wa-msg" rows="3"
+                placeholder="Tell me about your event — guests, duration, special requirements..."></textarea></div>
+            <button class="btn-wa" onclick="sendWA()">Send on WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-in">
+      <div>
+        <div class="f-brand">Devarshi Speaks</div>
+        <div class="f-copy">2025 Devarshi Trivedi · Premium Event Anchor · Ahmedabad, Gujarat · +91 70484 34026</div>
+      </div>
+      <div class="f-soc">
+        <a class="fs" href="https://wa.me/917048434026" target="_blank" title="WhatsApp">&#128172;</a>
+        <a class="fs" href="#" title="Instagram">&#128247;</a>
+        <a class="fs" href="#" title="YouTube">&#9654;</a>
+        <a class="fs" href="#" title="Facebook">&#128196;</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // STAR RATING
+    let selStar = 5;
+    const sBtns = document.querySelectorAll('.ss');
+    sBtns.forEach(b => {
+      b.addEventListener('mouseover', () => { const v = +b.dataset.v; sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= v)); });
+      b.addEventListener('mouseout', () => { sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= selStar)); });
+      b.addEventListener('click', () => { selStar = +b.dataset.v; sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= selStar)); });
+    });
+
+    // SUBMIT REVIEW
+    let stored = JSON.parse(localStorage.getItem('tds3_reviews') || '[]');
+    const BC = ['rb1', 'rb2', 'rb3', 'rb4'];
+    const AC = ['av1', 'av2', 'av3', 'av4'];
+    let avc = 0;
+    stored.forEach(r => addReview(r));
+
+    function submitReview() {
+      const name = document.getElementById('fb-name').value.trim();
+      const ev = document.getElementById('fb-event').value;
+      const txt = document.getElementById('fb-text').value.trim();
+      if (!name || !ev || !txt) { showToast('Please fill in all fields!'); return; }
+      const r = { name, ev, txt, stars: selStar, date: new Date().toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }) };
+      stored.push(r);
+      localStorage.setItem('tds3_reviews', JSON.stringify(stored));
+      addReview(r);
+      document.getElementById('fb-name').value = '';
+      document.getElementById('fb-event').value = '';
+      document.getElementById('fb-text').value = '';
+      selStar = 5; sBtns.forEach(s => s.classList.add('lit'));
+      showToast('Thank you for your review!');
+    }
+
+    function addReview(r) {
+      const init = r.name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+      const stars = '\u2605'.repeat(r.stars) + '\u2606'.repeat(5 - r.stars);
+      const bc = BC[avc % BC.length];
+      const ac = AC[avc % AC.length];
+      avc++;
+      const card = document.createElement('div');
+      card.className = 'rv-c';
+      card.innerHTML = `
+    <div class="rv-top"><div class="rv-stars">${stars}</div><span class="rv-b ${bc}">${esc(r.ev)}</span></div>
+    <p class="rv-txt">"${esc(r.txt)}"</p>
+    <div class="rv-auth">
+      <div class="av ${ac}">${init}</div>
+      <div><div class="rv-nm">${esc(r.name)}</div><div class="rv-ev">${esc(r.ev)} · ${r.date}</div></div>
+    </div>`;
+      document.getElementById('rvGrid').appendChild(card);
+    }
+
+    // WHATSAPP — clean ASCII symbols only
+    function sendWA() {
+      const name = document.getElementById('wa-name').value.trim();
+      const ev = document.getElementById('wa-event').value;
+      const date = document.getElementById('wa-date').value;
+      const city = document.getElementById('wa-city').value.trim();
+      const msg = document.getElementById('wa-msg').value.trim();
+      if (!name || !ev) { showToast('Please fill your name and event type!'); return; }
+
+      const d = date
+        ? new Date(date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
+        : 'Date to be confirmed';
+
+      // Using only standard ASCII + basic symbols that render perfectly on WhatsApp
+      let txt = '*Booking Enquiry - Devarshi Speaks*\n';
+      txt += '--------------------------------\n';
+      txt += '*Name:*  ' + name + '\n';
+      txt += '*Event:* ' + ev + '\n';
+      txt += '*Date:*  ' + d + '\n';
+      if (city) txt += '*City:*  ' + city + '\n';
+      if (msg) txt += '\n*Message:*\n' + msg + '\n';
+      txt += '--------------------------------\n';
+      txt += 'Looking forward to making your event unforgettable!';
+
+      window.open('https://wa.me/917048434026?text=' + encodeURIComponent(txt), '_blank');
+    }
+
+    // MOBILE NAV
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('navTog').innerHTML =
+        document.getElementById('navLinks').classList.contains('open') ? '&#10005;' : '&#9776;';
+    }
+
+    // NAV SCROLL
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('lifted', window.scrollY > 50);
+    });
+
+    // SCROLL REVEAL + SKILL BARS
+    let skillsDone = false;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+    const aboutObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !skillsDone) {
+          skillsDone = true;
+          setTimeout(() => {
+            document.querySelectorAll('.sk-fill').forEach(f => f.style.width = f.dataset.w);
+          }, 350);
+        }
+      });
+    }, { threshold: 0.15 });
+    const aboutSec = document.getElementById('about');
+    if (aboutSec) aboutObs.observe(aboutSec);
+
+    // TOAST
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2800);
+    }
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+  </script>
+</body>
+
+</html>
