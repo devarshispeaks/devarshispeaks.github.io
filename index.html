@@ -7,6 +7,7 @@
   <meta name="description"
     content="Devarshi Speaks — Premium Event Anchor. Weddings, Corporate Events, Baby Showers & More. Ahmedabad, Gujarat.">
   <title>Devarshi Speaks — Premium Event Anchor</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>">
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -2221,36 +2222,20 @@
 
   <script>
     // STAR RATING
-    let selStar = 5;
-    const sBtns = document.querySelectorAll('.ss');
-    sBtns.forEach(b => {
-      b.addEventListener('mouseover', () => { const v = +b.dataset.v; sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= v)); });
-      b.addEventListener('mouseout', () => { sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= selStar)); });
-      b.addEventListener('click', () => { selStar = +b.dataset.v; sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= selStar)); });
+    window.selStar = 5;
+    window.sBtns = document.querySelectorAll('.ss');
+    window.sBtns.forEach(b => {
+      b.addEventListener('mouseover', () => { const v = +b.dataset.v; window.sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= v)); });
+      b.addEventListener('mouseout', () => { window.sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= window.selStar)); });
+      b.addEventListener('click', () => { window.selStar = +b.dataset.v; window.sBtns.forEach(s => s.classList.toggle('lit', +s.dataset.v <= window.selStar)); });
     });
 
-    // SUBMIT REVIEW
-    let stored = JSON.parse(localStorage.getItem('tds3_reviews') || '[]');
+    // TESTIMONIAL SETUP
     const BC = ['rb1', 'rb2', 'rb3', 'rb4'];
     const AC = ['av1', 'av2', 'av3', 'av4'];
     let avc = 0;
-    stored.forEach(r => addReview(r));
 
-    function submitReview() {
-      const name = document.getElementById('fb-name').value.trim();
-      const ev = document.getElementById('fb-event').value;
-      const txt = document.getElementById('fb-text').value.trim();
-      if (!name || !ev || !txt) { showToast('Please fill in all fields!'); return; }
-      const r = { name, ev, txt, stars: selStar, date: new Date().toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }) };
-      stored.push(r);
-      localStorage.setItem('tds3_reviews', JSON.stringify(stored));
-      addReview(r);
-      document.getElementById('fb-name').value = '';
-      document.getElementById('fb-event').value = '';
-      document.getElementById('fb-text').value = '';
-      selStar = 5; sBtns.forEach(s => s.classList.add('lit'));
-      showToast('Thank you for your review!');
-    }
+    // (Firebase handles fetching and saving - see the module below)
 
     function addReview(r) {
       const init = r.name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
@@ -2342,6 +2327,90 @@
     function esc(s) {
       return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+  </script>
+
+  <!-- FIREBASE MODULE -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, serverTimestamp }
+      from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJ9JociiYu7vAYi_fBOW_XmQVP8purK08",
+      authDomain: "devarshi-speaks.firebaseapp.com",
+      projectId: "devarshi-speaks",
+      storageBucket: "devarshi-speaks.firebasestorage.app",
+      messagingSenderId: "495073127556",
+      appId: "1:495073127556:web:ce2a69acab96551f20e6d1"
+    };
+
+    let db;
+    try {
+      const app = initializeApp(firebaseConfig);
+      db = getFirestore(app);
+    } catch (e) {
+      console.warn("Firebase not properly configured yet. Reviews won't load/save until you add your config block above.");
+    }
+
+    // Expose submitReview to the window so the HTML button can trigger it
+    window.submitReview = async function () {
+      if (!db) { window.showToast('Please set up Firebase config first!'); return; }
+
+      const name = document.getElementById('fb-name').value.trim();
+      const ev = document.getElementById('fb-event').value;
+      const txt = document.getElementById('fb-text').value.trim();
+
+      if (!name || !ev || !txt) { window.showToast('Please fill in all fields!'); return; }
+
+      const dateStr = new Date().toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
+      const r = {
+        name: name,
+        ev: ev,
+        txt: txt,
+        stars: window.selStar,
+        date: dateStr,
+        approved: false, // Default to false to prevent spam
+        createdAt: serverTimestamp()
+      };
+
+      try {
+        await addDoc(collection(db, "testimonials"), r);
+        document.getElementById('fb-name').value = '';
+        document.getElementById('fb-event').value = '';
+        document.getElementById('fb-text').value = '';
+        window.selStar = 5;
+        window.sBtns.forEach(s => s.classList.add('lit'));
+
+        window.showToast('Thank you! Your review has been submitted for approval.');
+      } catch (e) {
+        console.error("Error submitting review:", e);
+        window.showToast('Error submitting review. Check console.');
+      }
+    };
+
+    // Load reviews on page load
+    async function loadReviews() {
+      if (!db) return;
+      try {
+        const q = query(collection(db, "testimonials"), where("approved", "==", true));
+        const querySnapshot = await getDocs(q);
+
+        // Convert to array and sort manually since we use 'createdAt'
+        const reviews = [];
+        querySnapshot.forEach((doc) => reviews.push(doc.data()));
+
+        // Sort newest first
+        reviews.sort((a, b) => (b.createdAt?.toMillis() || 0) - (a.createdAt?.toMillis() || 0));
+
+        reviews.forEach(review => {
+          window.addReview(review);
+        });
+      } catch (error) {
+        console.warn("Could not fetch reviews:", error);
+      }
+    }
+
+    loadReviews();
   </script>
 </body>
 
