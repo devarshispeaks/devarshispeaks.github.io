@@ -1173,6 +1173,224 @@
       margin-top: 3px
     }
 
+    /* ── SHOWREEL ────────────────────────────────── */
+    .vd-sec {
+      background: var(--bg3)
+    }
+
+    .vd-g {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 46px
+    }
+
+    .vd-c {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #1e1810;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lg);
+      transition: transform .4s, box-shadow .4s;
+    }
+
+    .vd-c:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl)
+    }
+
+    .vd-tall {
+      aspect-ratio: 9/16
+    }
+
+    .vd-wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9
+    }
+
+    .vd-c video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #1e1810
+    }
+
+    .vd-btn {
+      position: absolute;
+      inset: 0;
+      border: none;
+      padding: 0;
+      background: none;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      text-align: left;
+      cursor: pointer;
+      transition: opacity .35s;
+    }
+
+    .vd-c.playing .vd-btn {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .vd-ov {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(30, 24, 16, .78) 0%, rgba(30, 24, 16, .34) 34%, rgba(30, 24, 16, .04) 62%, rgba(30, 24, 16, .16) 100%)
+    }
+
+    .vd-ico {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 3px;
+      font-size: 17px;
+      color: #fff;
+      background: rgba(255, 255, 255, .18);
+      border: 1.5px solid rgba(255, 255, 255, .55);
+      backdrop-filter: blur(6px);
+      transition: all .35s;
+    }
+
+    .vd-c:hover .vd-ico {
+      background: var(--brand);
+      border-color: var(--brand);
+      transform: translate(-50%, -50%) scale(1.09);
+      box-shadow: 0 10px 30px rgba(201, 120, 96, .45)
+    }
+
+    .vd-time {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #fff;
+      background: rgba(30, 24, 16, .42);
+      border: 1px solid rgba(255, 255, 255, .3);
+      backdrop-filter: blur(6px);
+    }
+
+    .vd-lbl {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      display: block
+    }
+
+    .vd-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .vt1 {
+      background: var(--butter);
+      color: var(--butter-txt)
+    }
+
+    .vt2 {
+      background: var(--rose);
+      color: var(--rose-txt)
+    }
+
+    .vt3 {
+      background: var(--lav);
+      color: var(--lav-txt)
+    }
+
+    .vt4 {
+      background: var(--mint);
+      color: var(--mint-txt)
+    }
+
+    .vt5 {
+      background: var(--sky);
+      color: var(--sky-txt)
+    }
+
+    .vd-h3 {
+      display: block;
+      font-family: 'DM Serif Display', serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.2
+    }
+
+    .vd-p {
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      opacity: .88;
+      margin-top: 4px
+    }
+
+    .vd-cta {
+      grid-column: span 2;
+      border-radius: 28px;
+      border: 1.5px solid var(--brand-brd);
+      background: linear-gradient(165deg, var(--white) 0%, var(--peach-bg) 52%, var(--rose-bg) 100%);
+      box-shadow: var(--shadow);
+      padding: 32px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 240px;
+    }
+
+    .vd-cta h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 10px
+    }
+
+    .vd-cta h3 em {
+      font-style: italic;
+      color: var(--brand)
+    }
+
+    .vd-cta p {
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text2);
+      max-width: 420px;
+      margin-bottom: 20px
+    }
+
+    .vd-cta-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .vd-cta .btn-main,
+    .vd-cta .btn-outline {
+      padding: 11px 22px;
+      font-size: 13px;
+      text-align: center
+    }
+
     /* ── REVIEWS ─────────────────────────────────── */
     .rv-sec {
       background: var(--bg2)
@@ -1728,6 +1946,14 @@
         grid-template-rows: auto
       }
 
+      .vd-g {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .vd-cta {
+        min-height: 200px
+      }
+
       .gc-tall {
         grid-row: auto;
         aspect-ratio: 3/4
@@ -1764,6 +1990,15 @@
         grid-template-columns: 1fr
       }
 
+      .vd-g {
+        grid-template-columns: 1fr
+      }
+
+      .vd-wide,
+      .vd-cta {
+        grid-column: span 1
+      }
+
       .ev-g .ev-c:last-child {
         grid-column: span 1
       }
@@ -1797,6 +2032,7 @@
       <a href="#about">About</a>
       <a href="#events">Events</a>
       <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </div>
@@ -2019,6 +2255,102 @@
               <h3>Devarshi Trivedi</h3>
               <p>Ready for your next celebration</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+
+  <!-- SHOWREEL -->
+  <section class="vd-sec" id="videos">
+    <div class="si">
+      <div class="rv" style="text-align:center">
+        <div class="eyebrow ey-sky">Showreel</div>
+        <h2 class="sh">Watch the Room <em>Come Alive</em></h2>
+        <p class="sdesc" style="margin:0 auto">Clips straight from real events &mdash; haldi mornings, garba nights and
+          grand receptions. Tap any one to play.</p>
+      </div>
+      <div class="vd-g rv" style="transition-delay:.1s">
+        <div class="vd-c vd-tall">
+          <video src="videos/1.mp4" poster="videos/posters/1.jpg" preload="none" playsinline
+            title="Sunlit Haldi Energy"></video>
+          <button class="vd-btn" aria-label="Play video: Sunlit Haldi Energy">
+            <span class="vd-ov"></span>
+            <span class="vd-time">1:54</span>
+            <span class="vd-ico">&#9654;</span>
+            <span class="vd-lbl">
+              <span class="vd-tag vt1">Haldi Ceremony</span>
+              <span class="vd-h3">Sunlit Haldi Energy</span>
+              <span class="vd-p">Keeping the mandap buzzing all afternoon</span>
+            </span>
+          </button>
+        </div>
+        <div class="vd-c vd-tall">
+          <video src="videos/2.mp4" poster="videos/posters/2.jpg" preload="none" playsinline
+            title="Straight From the Mic"></video>
+          <button class="vd-btn" aria-label="Play video: Straight From the Mic">
+            <span class="vd-ov"></span>
+            <span class="vd-time">0:14</span>
+            <span class="vd-ico">&#9654;</span>
+            <span class="vd-lbl">
+              <span class="vd-tag vt2">Meet the Anchor</span>
+              <span class="vd-h3">Straight From the Mic</span>
+              <span class="vd-p">A quick hello from Devarshi</span>
+            </span>
+          </button>
+        </div>
+        <div class="vd-c vd-tall">
+          <video src="videos/4.mp4" poster="videos/posters/4.jpg" preload="none" playsinline
+            title="Full-House Crowd"></video>
+          <button class="vd-btn" aria-label="Play video: Full-House Crowd">
+            <span class="vd-ov"></span>
+            <span class="vd-time">1:28</span>
+            <span class="vd-ico">&#9654;</span>
+            <span class="vd-lbl">
+              <span class="vd-tag vt3">Public Event</span>
+              <span class="vd-h3">Full-House Crowd</span>
+              <span class="vd-p">Kids, families and happy chaos</span>
+            </span>
+          </button>
+        </div>
+        <div class="vd-c vd-tall">
+          <video src="videos/5.mp4" poster="videos/posters/5.jpg" preload="none" playsinline
+            title="The Grand Introduction"></video>
+          <button class="vd-btn" aria-label="Play video: The Grand Introduction">
+            <span class="vd-ov"></span>
+            <span class="vd-time">0:21</span>
+            <span class="vd-ico">&#9654;</span>
+            <span class="vd-lbl">
+              <span class="vd-tag vt5">Wedding Reception</span>
+              <span class="vd-h3">The Grand Introduction</span>
+              <span class="vd-p">Welcoming the couple of the evening</span>
+            </span>
+          </button>
+        </div>
+        <div class="vd-c vd-wide">
+          <video src="videos/3.mp4" poster="videos/posters/3.jpg" preload="none" playsinline
+            title="Garba Night Frenzy"></video>
+          <button class="vd-btn" aria-label="Play video: Garba Night Frenzy">
+            <span class="vd-ov"></span>
+            <span class="vd-time">2:41</span>
+            <span class="vd-ico">&#9654;</span>
+            <span class="vd-lbl">
+              <span class="vd-tag vt4">Sangeet &amp; Garba</span>
+              <span class="vd-h3">Garba Night Frenzy</span>
+              <span class="vd-p">Turning the street into a dance floor</span>
+            </span>
+          </button>
+        </div>
+        <div class="vd-cta">
+          <div class="eyebrow ey-peach" style="align-self:flex-start">Behind the Mic</div>
+          <h3>Your event, <em>this energy</em></h3>
+          <p>Every celebration has a rhythm. Devarshi finds it in the first five minutes &mdash; and keeps it going
+            till the last song.</p>
+          <div class="vd-cta-btns">
+            <a href="#contact" class="btn-main">Book Devarshi</a>
+            <a href="https://wa.me/917048434026" target="_blank" class="btn-outline">Chat on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -2317,6 +2649,37 @@
     }, { threshold: 0.15 });
     const aboutSec = document.getElementById('about');
     if (aboutSec) aboutObs.observe(aboutSec);
+
+    // SHOWREEL
+    const vdCards = document.querySelectorAll('.vd-c');
+
+    function vdReset(card) {
+      card.classList.remove('playing');
+      card.querySelector('video').controls = false;
+    }
+    vdCards.forEach(card => {
+      const v = card.querySelector('video');
+      card.querySelector('.vd-btn').addEventListener('click', () => {
+        vdCards.forEach(o => {
+          if (o !== card) { o.querySelector('video').pause(); vdReset(o); }
+        });
+        card.classList.add('playing');
+        v.controls = true;
+        // iOS low-power mode can block playback with sound - fall back to muted
+        const play = v.play();
+        if (play) play.catch(() => { v.muted = true; v.play(); });
+      });
+      v.addEventListener('ended', () => vdReset(card));
+    });
+
+    // pause a reel once it scrolls out of view
+    const vdObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        const v = e.target.querySelector('video');
+        if (!e.isIntersecting && !v.paused) { v.pause(); vdReset(e.target); }
+      });
+    }, { threshold: 0.2 });
+    vdCards.forEach(c => vdObs.observe(c));
 
     // TOAST
     function showToast(msg) {
